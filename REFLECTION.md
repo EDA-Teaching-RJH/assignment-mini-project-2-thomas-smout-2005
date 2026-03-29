@@ -26,4 +26,10 @@ The goals are as follows:
 
 I thought the best starting place would be to create a function that randomly generates a number from 1 - 6, like a dice does, using the random function.
 
-Next I should add a the abibility generate 5 different numbers in one go and choose which numbers can be kept. I'll use a for loop to loop the dice roll 3 times, and use a list to hold our 5 chosen numbers on each turn, before clearing the list again for the next turn
+Next I should add a the abibility generate 5 different numbers in one go and choose which numbers can be kept. I'll use a for loop to loop the dice roll 3 times, and use a list to hold our 5 chosen numbers on each turn, before clearing the list again for the next turn.
+
+Struggling to get the turn function to work so I'll try to make the choice section work next. Where a player can choose which section to put their result to.
+
+Complete Restart
+
+I'm stuggling to picture how to get everything to interact with each other and with some functions not working yet, i can't complete others, so I'm going to play around and get things to work individually first.
