@@ -8,6 +8,7 @@ def main():
     current_dice = [0, 0, 0, 0, 0]
     # Runs all three dice rolls
     end_dice_result = player_turn(kept_dice, current_dice)
+    chose_catagory(end_dice_result)
 
 
 # Function generates one random number from 1 to 6 to simulate a dice
@@ -59,6 +60,32 @@ def player_turn(kept_dice, current_dice):
         # Runs player roll funcion and returns up only what numbers the user is keeping
         kept_dice = player_roll(kept_dice, current_dice, turn)
     return kept_dice
+
+
+def chose_catagory(end_dice_result):
+    # While catagories has anything in it, game/loop continues
+    while catagories:
+        # Starting list before any dice are rolled
+        kept_dice = [0, 0, 0, 0, 0]
+        current_dice = [0, 0, 0, 0, 0]
+        print("\n--- Remaining Catagories ---")
+        # For loop, loops through all items in list catagories and outputs them
+        for i in range(len(catagories)):
+            # Printing formatting
+            print(f"{i+1}. {catagories[i]}")
+        # Asking user what they want to choose
+        choice = int(input("What catagory do you want to put this in? (e.g., 4) : "))
+        catagory_name = catagories[choice - 1]
+        # Remove catagory from list
+        catagories.pop(choice - 1)
+        if len(catagories) > 0:
+            # Roll new dice for this category
+            new_result = player_turn([0,0,0,0,0], [0,0,0,0,0])
+            # Score the new roll
+            score_value = check_score(new_result, catagory_name)
+        # Adds score value to list for later use
+        add_score(score_value)
+    print("\nGame Over!")
 
 
 # Function to work out score achieved in chosen catagory

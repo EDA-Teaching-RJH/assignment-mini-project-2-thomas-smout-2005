@@ -45,3 +45,5 @@ I need to figure out how to organise it so it won't let the user hold any dice o
 
 Moving on now to scoring and holding that score. I need to give the user the choice of where to put their score.
 Also adding main now to help organise path.
+
+Super long score checker was added. Now I need to link that to everything else and let the user choose their catagory
