@@ -44,3 +44,13 @@ def choose_keep(current_dice):
     return kept_dice
 
     
+def player_turn(kept_dice, current_dice):
+    # Use this loop to rerun the rolls three times
+    for z in range(3):
+        # turn equals the current number of player throws
+        turn = z + 1
+        # Display turn
+        print(f"\n--- Turn {turn} ---")
+        # Runs player roll funcion and returns up only what numbers the user is keeping
+        kept_dice = player_roll(kept_dice, current_dice, turn)
+    return kept_dice
