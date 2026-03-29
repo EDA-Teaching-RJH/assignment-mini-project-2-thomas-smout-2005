@@ -5,7 +5,6 @@ import random
 with open("catagory_scores.txt", "w"):
     pass
 
-
 # catagories that can be scored in
 catagories = ["Aces", "Twos", "Threes", "Fours", "Fives", "Sixes", "Three of a Kind", "Four of a Kind", "Full House", "Short Straight", "Long Straight", "YAHTZEE", "Chance"]
 
@@ -18,12 +17,15 @@ def main():
     # Runs all three dice rolls
     end_dice_result = player_turn(kept_dice, current_dice)
     chose_catagory(end_dice_result)
+    grand_total = final_score()
+    print(f"Your Grand Total is {grand_total}")
 
 
 # Function generates one random number from 1 to 6 to simulate a dice
 def dice_roll():
     dice = random.randint(1, 6)
     return dice
+
 
 # Function checks each position in the kept_dice list, to see if  value equal 0. If so, that means that number is a blank and needs to be rolled
 def player_roll(kept_dice, current_dice, turn):
@@ -57,8 +59,8 @@ def choose_keep(current_dice):
         # kept_dice will be taken to next turn, whist current_dice just shows what was rolled this turn
         kept_dice[position] = current_dice[position]
     return kept_dice
-
     
+
 def player_turn(kept_dice, current_dice):
     # Use this loop to rerun the rolls three times
     for z in range(3):
