@@ -47,3 +47,5 @@ Moving on now to scoring and holding that score. I need to give the user the cho
 Also adding main now to help organise path.
 
 Super long score checker was added. Now I need to link that to everything else and let the user choose their catagory
+
+Right. Now to play around with .txt files. I should just need to create a blank one at the start of the program, be able to edit it and then read it at the end.

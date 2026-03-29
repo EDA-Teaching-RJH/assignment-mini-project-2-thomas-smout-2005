@@ -1,6 +1,15 @@
 import random
 
 
+# resets the score text file to blank
+with open("catagory_scores.txt", "w"):
+    pass
+
+
+# catagories that can be scored in
+catagories = ["Aces", "Twos", "Threes", "Fours", "Fives", "Sixes", "Three of a Kind", "Four of a Kind", "Full House", "Short Straight", "Long Straight", "YAHTZEE", "Chance"]
+
+
 # Main function where everything starts and ends
 def main():
     # Starting list before any dice are rolled
@@ -137,3 +146,9 @@ def check_score(end_dice_result, catagory_name):
         return sum(end_dice_result)
     # If it fails any of the above, the score is zero
     return 0
+
+
+# Function to add worked out score to text file
+def add_score(score_value):
+    with open("catagory_scores.txt", "a") as text_file:
+        text_file.write(str(score_value) + "\n")
