@@ -9,7 +9,6 @@ The goals are as follows:
         Fours - Count and add only Fours
         Fives - Count and add only Fives
         Sixes - Count and add only Sixes
-        Bonus - If total score is 63 or over (Score 35)
     Lower Secion:
         3 of a Kind - Add total of all dices if three are the same
         4 of a Kind - Add total of all dices if four are the same
