@@ -51,3 +51,5 @@ Super long score checker was added. Now I need to link that to everything else a
 Right. Now to play around with .txt files. I should just need to create a blank one at the start of the program, be able to edit it and then read it at the end.
 
 Final function needed is to work out the total score by reading and summing up all scores from the txt file
+
+Code works, game works well enough!
