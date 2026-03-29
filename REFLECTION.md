@@ -33,3 +33,7 @@ Struggling to get the turn function to work so I'll try to make the choice secti
 Complete Restart
 
 I'm stuggling to picture how to get everything to interact with each other and with some functions not working yet, i can't complete others, so I'm going to play around and get things to work individually first.
+
+Once again starting with the dice roll. Just used the random function to achieve this.
+
+Next added a function for the player to roll 5 dice at once, using two lists to keep track of our current dice roll and any dice kept from the previous roll.
