@@ -19,5 +19,28 @@ def player_roll(kept_dice, current_dice, turn):
             # Dice roll is put into current dice so player can later chose what to keep
             current_dice[x] = dice_roll()
     print(f"Roll {current_dice}")
+    # This is command checks if it's the 3rd roll yet. If so, then it doesn't fun this code as theres no need
+    if turn < 3:
+        # Uses function to allow use to choose what to keep
+        kept_dice = choose_keep(current_dice)
+        return kept_dice
+    return current_dice
 
 
+# Function asks user what rolls they want to keep
+def choose_keep(current_dice):
+    # User input of what they want
+    keep = input("Keep:").strip()
+    # Split the user input so we can read each choice
+    final = keep.split()
+    # Reset any dice rolls that aren't being kept back to zero, so they can be rolled on the next loop
+    kept_dice = [0, 0, 0, 0, 0]
+    # For loop to only last the length of the user's input
+    for y in range(len(final)):
+        # Position in the list starts at 0, not 1, so all positions need to be moved one less
+        position = int(final[y]) - 1
+        # kept_dice will be taken to next turn, whist current_dice just shows what was rolled this turn
+        kept_dice[position] = current_dice[position]
+    return kept_dice
+
+    

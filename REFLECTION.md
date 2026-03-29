@@ -37,3 +37,5 @@ I'm stuggling to picture how to get everything to interact with each other and w
 Once again starting with the dice roll. Just used the random function to achieve this.
 
 Next added a function for the player to roll 5 dice at once, using two lists to keep track of our current dice roll and any dice kept from the previous roll.
+
+Function added to try and allow user to pick which numbers of the roll, they would like to keep and set up a zero back in place of numbers no kept
