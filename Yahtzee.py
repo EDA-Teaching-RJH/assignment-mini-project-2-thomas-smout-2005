@@ -152,3 +152,17 @@ def check_score(end_dice_result, catagory_name):
 def add_score(score_value):
     with open("catagory_scores.txt", "a") as text_file:
         text_file.write(str(score_value) + "\n")
+
+
+def final_score():
+    # Grand total starts at zero
+    grand_total = 0
+    # Read through every line in the .txt, translate them to integers and add them to the current grand total until all lines are read
+    with open("catagory_scores.txt", "r") as text_file:
+        for line in text_file:
+            value = int(line.strip())
+            grand_total = grand_total + value
+    return grand_total
+
+
+main()
